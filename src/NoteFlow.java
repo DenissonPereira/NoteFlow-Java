@@ -42,9 +42,9 @@ public class NoteFlow {
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new BorderLayout());
 
-        titleField = new JTextField("Título Aqui");
-        contentArea = new JTextArea("Coonteúdo da nota");
-        JButton posButton = new JButton("Criar Post");
+        titleField = new JTextField("Título Aqui: ");
+        contentArea = new JTextArea("Conteúdo da nota: ");
+        JButton posButton = new JButton("Criar Nota");
 
         posButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -83,7 +83,7 @@ public class NoteFlow {
 
         for (Post post : posts) {
             displayArea.append("Título: " + post.getTitle() + "\n");
-            displayArea.append("COnteúdo: " + post.getContent() + "\n");
+            displayArea.append("Conteúdo: " + post.getContent() + "\n");
             displayArea.append("------------\n");
         }
     }
