@@ -28,4 +28,11 @@ public class NoteFlow {
 
     private List<Post> posts = new ArrayList<>();
     private JFrame frame;
+    private JTextField titleField;
+    private JTextArea contentArea;
+    private JTextArea displayArea;
+
+    public NoteFLow() {
+        
+    }
 }
