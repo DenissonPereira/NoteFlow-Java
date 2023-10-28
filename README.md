@@ -9,8 +9,11 @@ O **NoteFLow** é uma elegante aplicação desenvolvida em **Java**, projetada p
 
 
 ## Layout
+
+### Criando notas
 ![Web 1](/public/Captura.png)
 
+### Notas salvas 
 ![Web 2](/public/Captura2.png)
 
 # Tecnologias utilizadas
