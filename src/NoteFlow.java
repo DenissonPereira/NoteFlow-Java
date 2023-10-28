@@ -73,7 +73,7 @@ public class NoteFlow {
         if (!title.isEmpty() && !content.isEmpty()) {
             Post post = new Post(title, content);
             posts.add(post);
-            displatyPosts();
+            displayPosts();
             titleField.setText("");
             contentArea.setText("");
         }
