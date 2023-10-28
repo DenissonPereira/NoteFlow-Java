@@ -1,13 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
-import javax.swing.JFrame;
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 class Post {
     private String title;
@@ -21,6 +20,7 @@ class Post {
     public String getTitle() {
         return title;
     }
+
     public String getContent() {
         return content;
     }
@@ -45,10 +45,17 @@ public class NoteFlow {
         titleField = new JTextField("Título Aqui: ");
         contentArea = new JTextArea("Conteúdo da nota: ");
         JButton posButton = new JButton("Criar Nota");
+        JButton saveButton = new JButton("Salvar Notas");
 
         posButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 createPost();
+            }
+        });
+
+        saveButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                exportNotes();
             }
         });
 
@@ -61,6 +68,7 @@ public class NoteFlow {
 
         frame.add(inputPanel, BorderLayout.NORTH);
         frame.add(new JScrollPane(displayArea), BorderLayout.CENTER);
+        frame.add(saveButton, BorderLayout.SOUTH);
 
         frame.setVisible(true);
     }
@@ -87,6 +95,22 @@ public class NoteFlow {
             displayArea.append("------------\n");
         }
     }
+
+    private void exportNotes() {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("notas.txt"));
+            for (Post post : posts) {
+                writer.write("Título: " + post.getTitle() + "\n");
+                writer.write("Conteúdo: " + post.getContent() + "\n");
+                writer.write("------------\n");
+            }
+            writer.close();
+            JOptionPane.showMessageDialog(frame, "Notas exportadas com sucesso para 'notas.txt'");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(frame, "Erro ao exportar as notas.");
+        }
+    }
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
