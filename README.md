@@ -9,21 +9,19 @@ O **NoteFLow** é uma elegante aplicação desenvolvida em **Java**, projetada p
 
 
 ## Layout
-![Web 1](/public/Captura1.png)
+![Web 1](/public/Captura.png)
 
 ![Web 2](/public/Captura2.png)
 
 # Tecnologias utilizadas
-## Front end
-- HTML
-- CSS
-
-## Implantação em produção
-- Front end web: GitHub Pages
+- JAVA
+- SWING
+- JFRAME
 
 # Como executar o projeto
 
-[Clique aqui](https://denissonpereira.github.io/RainbowCSS/)
+Você pode simplesmente [Clique aqui](https://github.com/DenissonPereira/NoteFlow-Java/archive/refs/heads/main.zip) aqui para fazer o download do repositório e executá-lo na sua IDE de escolha.
+
 
 # Autor
 
