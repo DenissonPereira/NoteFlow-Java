@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.ArrayList;
 import java.util.List;
 import javax.swing.*;
 import javax.swing.JFrame;
@@ -35,10 +34,10 @@ public class NoteFlow {
     private JTextArea contentArea;
     private JTextArea displayArea;
 
-    public NoteFLow() {
-        frame = new JFrame("Nota Pessoal")
+    public NoteFlow() {
+        frame = new JFrame("Nota Pessoal");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        frame.setSize(500, 500);
 
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new BorderLayout());
