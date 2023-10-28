@@ -1,6 +1,9 @@
 import java.util.ArrayList;
-
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.*;
+
+import javax.swing.JFrame;
 
 
 
@@ -24,4 +27,5 @@ class Post {
 public class NoteFlow {
 
     private List<Post> posts = new ArrayList<>();
+    private JFrame frame;
 }
