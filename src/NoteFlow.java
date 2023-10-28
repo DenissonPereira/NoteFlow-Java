@@ -67,6 +67,26 @@ public class NoteFlow {
     }
 
     private void createPost() {
-        
+        String title = titleField.getText();
+        String content = contentArea.getText();
+
+        if (!title.isEmpty() && !content.isEmpty()) {
+            Post post = new Post(title, content);
+            posts.add(post);
+            displatyPosts();
+            titleField.setText("");
+            contentArea.setText("");
+        }
     }
+
+    private void displayPosts(){
+        displayArea.setText("--- Notas já criadas ---\n");
+
+        for (Post post : posts) {
+            displayArea.append("Título: " + post.getTitle() + "\n");
+            displayArea.append("COnteúdo: " + post.getContent() + "\n");
+            displayArea.append("------------\n");
+        }
+    }
+    
 }
