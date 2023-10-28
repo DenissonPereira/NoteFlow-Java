@@ -52,5 +52,21 @@ public class NoteFlow {
                 createPost();
             }
         });
+
+        inputPanel.add(titleField, BorderLayout.NORTH);
+        inputPanel.add(contentArea, BorderLayout.CENTER);
+        inputPanel.add(posButton, BorderLayout.SOUTH);
+
+        displayArea = new JTextArea();
+        displayArea.setEditable(false);
+
+        frame.add(inputPanel, BorderLayout.NORTH);
+        frame.add(new JScrollPane(displayArea), BorderLayout.CENTER);
+
+        frame.setVisible(true);
+    }
+
+    private void createPost() {
+        
     }
 }
